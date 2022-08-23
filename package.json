@@ -1,6 +1,6 @@
 {
   "name": "pendingcad-electron",
-  "productName": "pendingcad-electron",
+  "productName": "PendingCAD",
   "version": "1.0.0",
   "description": "PendingCAD Application",
   "main": "src/index.js",
