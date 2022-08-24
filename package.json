@@ -1,7 +1,7 @@
 {
   "name": "pendingcad-electron",
   "productName": "PendingCAD",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "PendingCAD Application",
   "main": "src/index.js",
   "scripts": {
@@ -9,7 +9,25 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "PendingCAD",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "D:/Projects/Code/Code/JS TS/FiveM CAD/pendingcad-electron/src/favicon256.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "D:/Projects/Code/Code/JS TS/FiveM CAD/pendingcad-electron/src/favicon256.ico",
+      "uninstallerIcon": "D:/Projects/Code/Code/JS TS/FiveM CAD/pendingcad-electron/src/favicon256.ico",
+      "uninstallDisplayName": "PendingCAD - Uninstaller",
+      "license":  "D:/Projects/Code/Code/JS TS/FiveM CAD/pendingcad-electron/LICENSE",
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "keywords": [],
   "author": {
@@ -55,6 +73,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.65",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.65",
     "@electron-forge/maker-zip": "^6.0.0-beta.65",
-    "electron": "20.0.3"
+    "electron": "20.0.3",
+    "electron-builder": "^23.3.3"
   }
 }
